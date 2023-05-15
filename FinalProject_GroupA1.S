@@ -2,18 +2,29 @@
 #include "avr/io.h"
 
 .global main
-.global SPI_MAX7219_init
-.global MAX7219_disp_text
-.global HC_SR04_sensor
 
-main:
+main :
+RCALL SPI_MAX7219_init
+RCALL MAX7219_disp_text
+RCALL HC_SR04_sensor
+
+HC_SR04_sensor:
 ldi R24, 0xFF
 OUT DDRD, R24       ;set PORTD (PORTD as o/p - led_buzzer)
 CBI DDRC, 0         ;clear PC0 (pin A0 as i/p - button)
 SBI DDRB, 1         ;pin PB1 as o/p (Trigger)
 CBI DDRB, 0         ;pin PB0 as i/p (Echo)
 
-loop:
+loop: 
+    sbic PINC, 0      ; skip next instruction if PC0 is low
+    rjmp led_buzzer_on       ; jump to led_buzzer_on if PC0 is high
+    
+    ldi R24, 0b00000000   ; turn off led_buzzer if PC0 is low
+    out PORTD, R24
+    
+    RCALL agn
+
+agn:
     SBI   PORTB, 1
     RCALL delay_timer0
     CBI   PORTB, 1        ;send 10us high pulse to sensor
@@ -23,14 +34,7 @@ loop:
     RCALL byte2decimal    ;covert & display on MAX7219
     ;-----------------------------------------------------------
     RCALL delay_ms
-
-    sbic PINC, 0      ; skip next instruction if PC0 is low
-    rjmp led_buzzer_on       ; jump to led_buzzer_on if PC0 is high
-    
-    ldi R24, 0b00000000   ; turn off led_buzzer if PC0 is low
-    out PORTD, R24
-    
-    rjmp loop
+    RJMP  loop
 
 echo_PW:
 ;-------
@@ -63,6 +67,14 @@ led_buzzer_on:
     ldi R24, 0b01010000   ; turn on led_buzzer if PC0 is high
     out PORTD, R24
     ldi R25, 0xFF         ; set delay counter to 255  
+
+delay_loop:
+    dec R25               ; decrement counter
+    brne delay_loop       ; repeat until counter reaches zero
+    ldi R16, 0b00000000   ; turn off led_buzzer after delay
+    out PORTD, R16
+    rjmp loop
+
 
 SPI_MAX7219_init:
 ;----------------
@@ -201,11 +213,6 @@ l8: DEC   R23
     BRNE  l6
     RET
 
-delay_loop:
-    dec R25               ; decrement counter
-    brne delay_loop       ; repeat until counter reaches zero
-    ldi R16, 0b00000000   ; turn off led_buzzer after delay
-    out PORTD, R16
-    rjmp loop
+
 
 
