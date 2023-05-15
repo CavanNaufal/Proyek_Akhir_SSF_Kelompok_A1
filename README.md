@@ -19,15 +19,16 @@ Room Security System merupakan sebuah sistem pengaman ruangan yang dilengkapi de
 
 Peralatan yang dibutuhkan untuk merangkai Room Security System :
 
-Arduino Uno AtMega328p : Sebagai 'otak' utama dalam mengatur semua sistem agar bisa berjalan.
-Sensor PIR : Melakukan deteksi terhadap gerakan yang terjadi di sekitarnya.
-Sensor HC-SR04 : Melakukan pengukuran jarak suatu objek terhadap security system.
-LED : LED akan menyala sebagai penanda jika terjadi bahaya.
-Module Buzzer : Buzzer akan berbunyi jika terjadi bahaya.
-Breadbroad : Sebagai media untuk merangkai semua komponen menjadi satu bagian.
-Jumper : Sebagai kabel penghubung antar komponen.
-Baterai/Catu daya : Sebagai sumber daya penggerak Room Security System ini.
-Seven Segment Module : Menampilkan jarak antara sebuah objek dengan sensor pada sistem ini.
+- Arduino Uno AtMega328p : Sebagai 'otak' utama dalam mengatur semua sistem agar bisa berjalan.
+- Sensor PIR : Melakukan deteksi terhadap gerakan yang terjadi di sekitarnya.
+- Sensor HC-SR04 : Melakukan pengukuran jarak suatu objek terhadap security system.
+- LED : LED akan menyala sebagai penanda jika terjadi bahaya.
+- Module Buzzer : Buzzer akan berbunyi jika terjadi bahaya.
+- Breadbroad : Sebagai media untuk merangkai semua komponen menjadi satu bagian.
+- Jumper : Sebagai kabel penghubung antar komponen.
+- Baterai/Catu daya : Sebagai sumber daya penggerak Room Security System ini.
+- Seven Segment Module : Menampilkan jarak antara sebuah objek dengan sensor pada sistem ini.
+
 Langkah-langkah merangkainya :
 
 
