@@ -1,6 +1,27 @@
 # Proyek_Akhir_SSF_Kelompok_A1
 ## i.   Introduction to the problem and the solution
+---
+Kejahatan merupakan sebuah tindakan yang tidak terpuji dan sangat merugikan korban. Semakin banyak kejahatan yang terjadi, semakin banyak pula kerugian yang akan terjadi pada pihak korban. 
+Zaman yang semakin maju ini, tingkat kejahatan makin tinggi dan metodenya pun semakin canggih. Kita sendiri perlu melakukan antisipasi dan pengawasan terhadap properti milik kita dan diri kita sendiri untuk mencegah hal-hal yang tidak diinginkan. Pencegahan dini dapat dilakukan dimulai dari lingkungan sekitar, yaitu tempat tinggal kita. Kita perlu memperketat pengawasan dan penjagaan pada rumah atau tempat tinggal yang ditinggali. Oleh karena itu, kelompok kami membawa sebuah ide untuk membuat Room Security System.
+
+Room Security System merupakan sebuah sistem pengaman ruangan yang dilengkapi dengan sensor gerak dan sensor jarak yang bertujuan untuk melakukan pengawasan terhadap celah-celah rawan pada rumah kita seperti pintu dan jendela. Alat ini akan mendeteksi gerakan pintu/jendela dengan menggunakan sensor dan jika sudah mencapai suatu kondisi tertentu akan mengaktifkan suara yang bersumber dari buzzer dan LED akan menyala yang menandakan tanda mencurigakan atau bahaya. 
+
 ## ii.  Hardware design and implementation details
+---
+Peralatan yang dibutuhkan untuk merangkai Room Security System :
+1. Arduino Uno AtMega328p : Sebagai 'otak' utama dalam mengatur semua sistem agar bisa berjalan.
+2. Sensor PIR : Melakukan deteksi terhadap gerakan yang terjadi di sekitarnya.
+3. Sensor HC-SR04 : Melakukan pengukuran jarak suatu objek terhadap security system.
+4. LED : LED akan menyala sebagai penanda jika terjadi bahaya.
+5. Module Buzzer : Buzzer akan berbunyi jika terjadi bahaya.
+6. Breadbroad : Sebagai media untuk merangkai semua komponen menjadi satu bagian.
+7. Jumper : Sebagai kabel penghubung antar komponen.
+8. Baterai/Catu daya : Sebagai sumber daya penggerak Room Security System ini.
+9. Seven Segment Module : Menampilkan jarak antara sebuah objek dengan sensor pada sistem ini.
+
+Langkah-langkah merangkainya : 
+
+
 ## iii. Software implementation details
 ## iv.  Test results and performance evaluation
 ## v. Conclusion and future work
