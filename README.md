@@ -1,13 +1,24 @@
 #   Room Security System
 ### _Kelompok A1 Sistem Siber Fisik-02_
 
-Room Security System adalah alat keamanan ruangan yang dirancang dengan teknologi canggih dan dilengkapi dengan sensor gerak yaitu PIR Sensor (Passive Infra Red) dan Sensor HC-SR04 untuk mengukur jarak yang terdeteksi oleh sensor PIR yang kemudian ditampilkan melalui 7 Segment MAX7219.
+Room Security System adalah alat keamanan ruangan yang dirancang dengan teknologi canggih dan dilengkapi dengan sensor gerak yaitu PIR Sensor Passive Infra Red) dan Sensor HC-SR04 untuk mengukur jarak yang terdeteksi oleh sensor PIR yang kemudian ditampilkan melalui 7 Segment MAX7219.
 
 Anggota Kelompok A1:
 - Azzah Azkiyah Angeli Syahwa        - 2106731390
 - Cecilia Inez Reva Manurung          - 2106636994
 - Mikhael Morris Hapataran Siallagan  - 2106731491
 - Muhammad Cavan Naufal Azizi	      - 2106702730
+
+## Features
+
+-   [Introduction to the problem and the solution](#introduction-to-the-problem-and-the-solution)
+-   [Hardware design and implementation details](#hardware-design-and-implementationdetails)
+    -   [Schematic](#common-options)
+-   [Software implementation details](#software-implementation-details)
+    -   [Common Options](#common-options)
+-   [Test results and performance evaluation](#test-results-and-performance-evaluation)
+    -   [Test results and performance evaluation](#test-results-and-performance-evaluation)
+
 
 ## i. Introduction to the problem and the solution
 
@@ -30,7 +41,6 @@ Peralatan yang dibutuhkan untuk merangkai Room Security System :
 - Seven Segment Module : Menampilkan jarak antara sebuah objek dengan sensor pada sistem ini.
 
 Langkah-langkah merangkainya :
-
 
 ## iii. Software implementation details
 
