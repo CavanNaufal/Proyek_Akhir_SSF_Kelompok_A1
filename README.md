@@ -2,9 +2,11 @@
 ## i.   Introduction to the problem and the solution
 ---
 Kejahatan merupakan sebuah tindakan yang tidak terpuji dan sangat merugikan korban. Semakin banyak kejahatan yang terjadi, semakin banyak pula kerugian yang akan terjadi pada pihak korban. 
-Zaman yang semakin maju ini, tingkat kejahatan makin tinggi dan metodenya pun semakin canggih. Kita sendiri perlu melakukan antisipasi dan pengawasan terhadap properti milik kita dan diri kita sendiri untuk mencegah hal-hal yang tidak diinginkan. Pencegahan dini dapat dilakukan dimulai dari lingkungan sekitar, yaitu tempat tinggal kita. Kita perlu memperketat pengawasan dan penjagaan pada rumah atau tempat tinggal yang ditinggali. Oleh karena itu, kelompok kami membawa sebuah ide untuk membuat Room Security System.
+Zaman yang semakin maju ini, tingkat kejahatan makin tinggi dan metodenya pun semakin canggih. Kita sendiri perlu melakukan antisipasi dan pengawasan terhadap properti milik kita dan diri kita sendiri untuk mencegah hal-hal yang tidak diinginkan. 
+Pencegahan dini dapat dilakukan dimulai dari lingkungan sekitar, yaitu tempat tinggal kita. Kita perlu memperketat pengawasan dan penjagaan pada rumah atau tempat tinggal yang ditinggali. Oleh karena itu, kelompok kami membawa sebuah ide untuk membuat Room Security System.
 
-Room Security System merupakan sebuah sistem pengaman ruangan yang dilengkapi dengan sensor gerak dan sensor jarak yang bertujuan untuk melakukan pengawasan terhadap celah-celah rawan pada rumah kita seperti pintu dan jendela. Alat ini akan mendeteksi gerakan pintu/jendela dengan menggunakan sensor dan jika sudah mencapai suatu kondisi tertentu akan mengaktifkan suara yang bersumber dari buzzer dan LED akan menyala yang menandakan tanda mencurigakan atau bahaya. 
+Room Security System merupakan sebuah sistem pengaman ruangan yang dilengkapi dengan sensor gerak dan sensor jarak yang bertujuan untuk melakukan pengawasan terhadap celah-celah rawan pada rumah kita seperti pintu dan jendela. 
+Alat ini akan mendeteksi gerakan pintu/jendela dengan menggunakan sensor dan jika sudah mencapai suatu kondisi tertentu akan mengaktifkan suara yang bersumber dari buzzer dan LED akan menyala yang menandakan tanda mencurigakan atau bahaya. 
 
 ## ii.  Hardware design and implementation details
 ---
