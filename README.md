@@ -69,6 +69,9 @@ Langkah-langkah untuk merangkai rangkaian:
 
 ## iii. Software implementation details
 
+Berikut flowchart secara keseluruhan mengenai program yang dibuat:
+![image](https://github.com/CavanNaufal/Proyek_Akhir_SSF_Kelompok_A1/assets/88528641/936ac7e0-9c4b-4256-91d5-e9504ebbd30c)
+
 Program ini ditulis dalam bahasa assembly untuk menghubungkan sensor PIR, sensor jarak HC-SR04 dan LED seven-segment MAX7219 dalam mikrokontroler ATMega328P. Program ini menggunakan protokol komunikasi serial synchronous yaitu SPI (Serial Peripheral Interface) untuk berkomunikasi dengan MAX7219 dan menghitung jarak yang diukur sensor HC-SR04 dengan mengukur lebar pulsa dari sinyal echo. Program dimulai dengan mengatur port input atau output. Port D dikonfigurasi sebagai output untuk LED merah dan buzzer yang terhubung, dan pin A0 (PC0) dikonfigurasi sebagai input untuk button. Pin PB0 dan PB1 dikonfigurasi sebagai pin input dan output untuk sensor HC-SR04. 
 
 Pada loop utama, program mengirimkan high pulse 10us ke sensor HC-SR04 untuk memulai pengukuran jarak. Kemudian menghitung lebar pulsa dari sinyal echo dengan subroutine echo_PW, yang menggunakan Timer1 (normal mode). Program kemudian mengubah lebar pulse terukur menjadi nilai desimal dan menampilkannya pada MAX7219 menggunakan subroutine MAX7219_disp_text. Subroutine MAX7219_disp_text akan menampilkan string text “d” pada 2 digit pertama. Jika tombol yang terhubung ke pin A0 ditekan, LED dan active buzzer yang terhubung ke port D akan menyala sebentar, dan kemudian mati. 
