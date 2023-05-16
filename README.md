@@ -30,16 +30,33 @@ Room Security System merupakan sebuah sistem pengaman ruangan yang dilengkapi de
 
 Peralatan yang dibutuhkan untuk merangkai Room Security System :
 
-![Arduino Uno AtMega328p](https://github.com/CavanNaufal/Proyek_Akhir_SSF_Kelompok_A1/assets/88528641/ce32f361-a6b4-462e-b747-a1c8d21ef533)
+### 1. Sebuah Arduino Uno ATMega328p
 Sebagai 'otak' utama dalam mengatur semua sistem agar bisa berjalan.
-- Sensor PIR : Melakukan deteksi terhadap gerakan yang terjadi di sekitarnya.
-- Sensor HC-SR04 : Melakukan pengukuran jarak suatu objek terhadap security system.
-- LED : LED akan menyala sebagai penanda jika terjadi bahaya.
-- Module Buzzer : Buzzer akan berbunyi jika terjadi bahaya.
-- Breadbroad : Sebagai media untuk merangkai semua komponen menjadi satu bagian.
-- Jumper : Sebagai kabel penghubung antar komponen.
-- Baterai/Catu daya : Sebagai sumber daya penggerak Room Security System ini.
-- Seven Segment Module : Menampilkan jarak antara sebuah objek dengan sensor pada sistem ini.
+![Arduino Uno AtMega328p](https://github.com/CavanNaufal/Proyek_Akhir_SSF_Kelompok_A1/assets/88528641/ce32f361-a6b4-462e-b747-a1c8d21ef533)
+### 2. Sebuah Sensor PIR 
+![pirsensor](https://github.com/CavanNaufal/Proyek_Akhir_SSF_Kelompok_A1/assets/88528641/6085556e-fc3d-44c2-9fb1-541dfaed6246)
+Melakukan deteksi terhadap gerakan yang terjadi di sekitarnya.
+### 3. Sebuah Sensor HC-SR04 
+![hcsr04](https://github.com/CavanNaufal/Proyek_Akhir_SSF_Kelompok_A1/assets/88528641/d493151b-f1c0-47a1-9cfa-29d62ea6a766)
+Melakukan pengukuran jarak suatu objek terhadap security system.
+### 4. Sebuah LED 
+![led](https://github.com/CavanNaufal/Proyek_Akhir_SSF_Kelompok_A1/assets/88528641/d387d051-c28a-4151-aaf6-2a03720ba4dc)
+LED akan menyala sebagai penanda jika terjadi bahaya.
+### 5. Sebuah Active Buzzer 
+![activebuzzer](https://github.com/CavanNaufal/Proyek_Akhir_SSF_Kelompok_A1/assets/88528641/562753bd-6897-4607-9b50-376bb8e9c91e)
+Buzzer akan berbunyi jika terjadi bahaya.
+### 6. Sebuah Breadbroad 
+![bbroad](https://github.com/CavanNaufal/Proyek_Akhir_SSF_Kelompok_A1/assets/88528641/e9ec33f1-a42d-41da-830c-a364a45d7848)
+Sebagai media untuk merangkai semua komponen menjadi satu bagian.
+### 7. Kabel Jumper 
+![jumpercab](https://github.com/CavanNaufal/Proyek_Akhir_SSF_Kelompok_A1/assets/88528641/d0c140e2-fbfd-41ee-92fa-2aad8a6b5a1d)
+Sebagai kabel penghubung antar komponen.
+### 8. AC/DC adapter
+![acdc](https://github.com/CavanNaufal/Proyek_Akhir_SSF_Kelompok_A1/assets/88528641/59e42111-e145-4ec3-848f-a17ea8640343)
+Sebagai sumber daya penggerak Room Security System ini.
+### 9. Sebuah MAX7219 Seven Segment Module 
+![sevseg_mod](https://github.com/CavanNaufal/Proyek_Akhir_SSF_Kelompok_A1/assets/88528641/988cd661-6382-4bc8-b5c9-f74399981644)
+Menampilkan jarak antara sebuah objek dengan sensor pada sistem ini.
 
 Langkah-langkah merangkainya :
 
