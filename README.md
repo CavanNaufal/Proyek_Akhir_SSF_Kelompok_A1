@@ -13,13 +13,12 @@ Room Security System adalah alat keamanan ruangan yang dirancang dengan teknolog
 
 -   [Introduction to the Problem and the Solution](#i.-introduction-to-the-problem-and-the-solution)
 -   [Hardware Design and Implementation details](#ii.-hardware-design-and-implementationdetails)
-    -   [Schematic](#common-options)
 -   [Software Implementation Details](#iii.-software-implementation-details)
-    -   [Common Options](#common-options)
 -   [Test Results and Performance Evaluation](#iv.-test-results-and-performance-evaluation)
-    -   [Test results and Performance Evaluation](#v.-test-results-and-performance-evaluation)
 -   [Conclusion and Future Work](#v.-conclusion-and-future-work)
 
+### Power Point
+[![Link PPT Presentasi](https://img.shields.io/badge/Canva-%2300C4CC.svg?&style=for-the-badge&logo=Canva&logoColor=white)](https://www.canva.com/design/DAFjEY1QDDg/U4UY0C1rjZZYeSnTJdugcg/edit?utm_content=DAFjEY1QDDg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 ## i. Introduction to the problem and the solution
 
@@ -81,4 +80,6 @@ Subroutine SPI_MAX7219_init mengatur SPI untuk berkomunikasi dengan MAX7219 deng
 
 ## v. Conclusion and Future Work
 
-#### Power Point [[Link PPT Presentasi]](https://www.canva.com/design/DAFjEY1QDDg/U4UY0C1rjZZYeSnTJdugcg/edit?utm_content=DAFjEY1QDDg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+Room Security System menggunakan mikrokontroler ATmega328P, sensor PIR, HC-SR04, buzzer, dan LED untuk memonitor gerakan di dalam ruangan. Sistem ini terus memeriksa jarak objek dan status sensor PIR. Ketika gerakan terdeteksi, buzzer dan LED memicu alarm dan memberikan indikasi visual. 
+
+Integrasi sensor PIR memberikan deteksi gerakan yang handal. Buzzer dan LED berfungsi sebagai mekanisme peringatan yang efektif, memberi tahu pengguna tentang pelanggaran keamanan atau perubahan lingkungan. Fleksibilitas komponen perangkat keras memudahkan perakitan, modifikasi, dan pengujian. Room Security System ini solusi hemat biaya dan mudah diakses untuk meningkatkan keamanan ruangan.
