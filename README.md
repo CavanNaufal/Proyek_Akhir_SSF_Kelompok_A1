@@ -30,7 +30,8 @@ Room Security System merupakan sebuah sistem pengaman ruangan yang dilengkapi de
 
 Peralatan yang dibutuhkan untuk merangkai Room Security System :
 
-- Arduino Uno AtMega328p : Sebagai 'otak' utama dalam mengatur semua sistem agar bisa berjalan.
+![- Arduino Uno AtMega328p](https://github.com/CavanNaufal/Proyek_Akhir_SSF_Kelompok_A1/assets/88528641/ce32f361-a6b4-462e-b747-a1c8d21ef533)
+Sebagai 'otak' utama dalam mengatur semua sistem agar bisa berjalan.
 - Sensor PIR : Melakukan deteksi terhadap gerakan yang terjadi di sekitarnya.
 - Sensor HC-SR04 : Melakukan pengukuran jarak suatu objek terhadap security system.
 - LED : LED akan menyala sebagai penanda jika terjadi bahaya.
