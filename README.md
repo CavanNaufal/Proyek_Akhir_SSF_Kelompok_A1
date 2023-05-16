@@ -32,31 +32,31 @@ Peralatan yang dibutuhkan untuk merangkai Room Security System :
 
 ### 1. Sebuah Arduino Uno ATMega328p
 Sebagai 'otak' utama dalam mengatur semua sistem agar bisa berjalan.
-![Arduino Uno AtMega328p](https://github.com/CavanNaufal/Proyek_Akhir_SSF_Kelompok_A1/assets/88528641/ce32f361-a6b4-462e-b747-a1c8d21ef533)
+![image](https://github.com/CavanNaufal/Proyek_Akhir_SSF_Kelompok_A1/assets/88528641/ce32f361-a6b4-462e-b747-a1c8d21ef533)
 ### 2. Sebuah Sensor PIR 
 Melakukan deteksi terhadap gerakan yang terjadi di sekitarnya.
-![pirsensor](https://github.com/CavanNaufal/Proyek_Akhir_SSF_Kelompok_A1/assets/88528641/6085556e-fc3d-44c2-9fb1-541dfaed6246)
+![image](https://github.com/CavanNaufal/Proyek_Akhir_SSF_Kelompok_A1/assets/88528641/6085556e-fc3d-44c2-9fb1-541dfaed6246)
 ### 3. Sebuah Sensor HC-SR04 
 Melakukan pengukuran jarak suatu objek terhadap security system.
-![hcsr04](https://github.com/CavanNaufal/Proyek_Akhir_SSF_Kelompok_A1/assets/88528641/d493151b-f1c0-47a1-9cfa-29d62ea6a766)
+![image](https://github.com/CavanNaufal/Proyek_Akhir_SSF_Kelompok_A1/assets/88528641/d493151b-f1c0-47a1-9cfa-29d62ea6a766)
 ### 4. Sebuah LED 
 LED akan menyala sebagai penanda jika terjadi pergerakan yang dideteksi oleh sensor PIR.
-![led](https://github.com/CavanNaufal/Proyek_Akhir_SSF_Kelompok_A1/assets/88528641/d387d051-c28a-4151-aaf6-2a03720ba4dc)
+![image](https://github.com/CavanNaufal/Proyek_Akhir_SSF_Kelompok_A1/assets/88528641/d387d051-c28a-4151-aaf6-2a03720ba4dc)
 ### 5. Sebuah Active Buzzer 
 Buzzer akan berbunyi jika terjadi pergerakan yang dideteksi oleh sensor PIR.
-![activebuzzer](https://github.com/CavanNaufal/Proyek_Akhir_SSF_Kelompok_A1/assets/88528641/562753bd-6897-4607-9b50-376bb8e9c91e)
+![image](https://github.com/CavanNaufal/Proyek_Akhir_SSF_Kelompok_A1/assets/88528641/562753bd-6897-4607-9b50-376bb8e9c91e)
 ### 6. Sebuah Breadbroad 
 Sebagai media untuk merangkai semua komponen menjadi satu bagian.
-![bbroad](https://github.com/CavanNaufal/Proyek_Akhir_SSF_Kelompok_A1/assets/88528641/e9ec33f1-a42d-41da-830c-a364a45d7848)
+![image](https://github.com/CavanNaufal/Proyek_Akhir_SSF_Kelompok_A1/assets/88528641/e9ec33f1-a42d-41da-830c-a364a45d7848)
 ### 7. Kabel Jumper 
 Sebagai kabel penghubung antar komponen.
-![jumpercab](https://github.com/CavanNaufal/Proyek_Akhir_SSF_Kelompok_A1/assets/88528641/d0c140e2-fbfd-41ee-92fa-2aad8a6b5a1d)
+![image](https://github.com/CavanNaufal/Proyek_Akhir_SSF_Kelompok_A1/assets/88528641/d0c140e2-fbfd-41ee-92fa-2aad8a6b5a1d)
 ### 8. AC/DC adapter
 Sebagai sumber daya penggerak Room Security System ini.
-![acdc](https://github.com/CavanNaufal/Proyek_Akhir_SSF_Kelompok_A1/assets/88528641/59e42111-e145-4ec3-848f-a17ea8640343)
+![image](https://github.com/CavanNaufal/Proyek_Akhir_SSF_Kelompok_A1/assets/88528641/59e42111-e145-4ec3-848f-a17ea8640343)
 ### 9. Sebuah MAX7219 Seven Segment Module 
 Menampilkan jarak antara sebuah objek dengan sensor pada sistem ini.
-![sevseg_mod](https://github.com/CavanNaufal/Proyek_Akhir_SSF_Kelompok_A1/assets/88528641/988cd661-6382-4bc8-b5c9-f74399981644)
+![image](https://github.com/CavanNaufal/Proyek_Akhir_SSF_Kelompok_A1/assets/88528641/988cd661-6382-4bc8-b5c9-f74399981644)
 
 Langkah-langkah untuk merangkai rangkaian:
 - Pasang LED kemudian hubungkan ke PB4 dan Buzzer kemudian hubungkan ke PB6 .
