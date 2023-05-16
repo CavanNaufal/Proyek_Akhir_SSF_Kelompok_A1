@@ -4,21 +4,20 @@
 .global main
 
 main :
-RCALL SPI_MAX7219_init
-RCALL MAX7219_disp_text
-RCALL HC_SR04_sensor
+    RCALL SPI_MAX7219_init
+    RCALL MAX7219_disp_text
+    RCALL all_sensor
 
-HC_SR04_sensor:
-ldi R24, 0xFF
-OUT DDRD, R24       ;set PORTD (PORTD as o/p - led_buzzer)
-CBI DDRC, 0         ;clear PC0 (pin A0 as i/p - button)
-SBI DDRB, 1         ;pin PB1 as o/p (Trigger)
-CBI DDRB, 0         ;pin PB0 as i/p (Echo)
+all_sensor:
+    ldi R24, 0xFF
+    OUT DDRD, R24       ;set PORTD (PORTD as o/p - led_buzzer)
+    CBI DDRC, 0         ;clear PC0 (pin A0 as i/p - PIR Sensor)
+    SBI DDRB, 1         ;pin PB1 as o/p (Trigger)
+    CBI DDRB, 0         ;pin PB0 as i/p (Echo)
 
 loop: 
-    sbic PINC, 0      ; skip next instruction if PC0 is low
-    rjmp led_buzzer_on       ; jump to led_buzzer_on if PC0 is high
-    
+    sbic PINC, 0          ; skip next instruction if PC0 is low
+    rjmp led_buzzer_on    ; jump to led_buzzer_on if PC0 is high
     ldi R24, 0b00000000   ; turn off led_buzzer if PC0 is low
     out PORTD, R24
     
@@ -66,21 +65,27 @@ l2: IN    R21, TIFR1
 led_buzzer_on:
     ldi R24, 0b01010000   ; turn on led_buzzer if PC0 is high
     out PORTD, R24
-    ldi R25, 0xFF         ; set delay counter to 255  
 
 delay_loop:
-    dec R25               ; decrement counter
-    brne delay_loop       ; repeat until counter reaches zero
+   LDI   R21, 255
+a: LDI   R22, 255
+b: LDI   R23, 50
+c: DEC   R23
+    BRNE  c
+    DEC   R22
+    BRNE  b
+    DEC   R21
+    BRNE  a
     ldi R16, 0b00000000   ; turn off led_buzzer after delay
     out PORTD, R16
     rjmp loop
 
 
+;==============================================================
 SPI_MAX7219_init:
-;----------------
-.equ  SCK, 5
-.equ  MOSI, 3
-.equ  SS, 2
+  .equ  SCK, 5
+  .equ  MOSI, 3
+  .equ  SS, 2
 ;--------------------------------------------------------------
       LDI   R17, (1<<MOSI)|(1<<SCK)|(1<<SS)
       OUT   DDRB, R17       ;set MOSI, SCK, SS as o/p
@@ -105,6 +110,7 @@ SPI_MAX7219_init:
       RCALL send_bytes      ;send command & data to MAX7219
       ;--------------------------------------------------------
       RET
+
 ;==============================================================
 MAX7219_disp_text:
 ;-----------------
@@ -133,6 +139,7 @@ MAX7219_disp_text:
       RCALL send_bytes      ;send command & data to MAX7219
       ;--------------------------------------------------------
       RET
+      
 ;==============================================================
 send_bytes:
       CBI   PORTB, SS       ;enable slave device MAX7219
