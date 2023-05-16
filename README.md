@@ -77,3 +77,5 @@ Subroutine SPI_MAX7219_init mengatur SPI untuk berkomunikasi dengan MAX7219 deng
 
 
 ## iv. Test results and performance evaluation
+
+##### Power Point [[Link PPT Presentasi]](https://www.canva.com/design/DAFjEY1QDDg/U4UY0C1rjZZYeSnTJdugcg/edit?utm_content=DAFjEY1QDDg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
