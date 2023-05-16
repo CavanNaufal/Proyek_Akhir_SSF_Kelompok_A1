@@ -11,13 +11,14 @@ Room Security System adalah alat keamanan ruangan yang dirancang dengan teknolog
 
 ## Features
 
--   [Introduction to the problem and the solution](#introduction-to-the-problem-and-the-solution)
--   [Hardware design and implementation details](#hardware-design-and-implementationdetails)
+-   [Introduction to the Problem and the Solution](#i.-introduction-to-the-problem-and-the-solution)
+-   [Hardware Design and Implementation details](#ii.-hardware-design-and-implementationdetails)
     -   [Schematic](#common-options)
--   [Software implementation details](#software-implementation-details)
+-   [Software Implementation Details](#iii.-software-implementation-details)
     -   [Common Options](#common-options)
--   [Test results and performance evaluation](#test-results-and-performance-evaluation)
-    -   [Test results and performance evaluation](#test-results-and-performance-evaluation)
+-   [Test Results and Performance Evaluation](#iv.-test-results-and-performance-evaluation)
+    -   [Test results and Performance Evaluation](#v.-test-results-and-performance-evaluation)
+-   [Conclusion and Future Work](#v.-conclusion-and-future-work)
 
 
 ## i. Introduction to the problem and the solution
@@ -78,4 +79,6 @@ Subroutine SPI_MAX7219_init mengatur SPI untuk berkomunikasi dengan MAX7219 deng
 
 ## iv. Test results and performance evaluation
 
-##### Power Point [[Link PPT Presentasi]](https://www.canva.com/design/DAFjEY1QDDg/U4UY0C1rjZZYeSnTJdugcg/edit?utm_content=DAFjEY1QDDg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+## v. Conclusion and Future Work
+
+#### Power Point [[Link PPT Presentasi]](https://www.canva.com/design/DAFjEY1QDDg/U4UY0C1rjZZYeSnTJdugcg/edit?utm_content=DAFjEY1QDDg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
