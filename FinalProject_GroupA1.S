@@ -1,12 +1,12 @@
 #define __SFR_OFFSET 0x00
 #include "avr/io.h"
 
-.global main
+.global main    ;Declare the main function as global.
 
 main :
-    RCALL SPI_MAX7219_init
-    RCALL MAX7219_disp_text
-    RCALL all_sensor
+    RCALL SPI_MAX7219_init  ;Call the SPI_MAX7219_init function to initialize the MAX7219 display.
+    RCALL MAX7219_disp_text ;Call the MAX7219_disp_text function to display the text "Hello, World!" on the MAX7219 display.
+    RCALL all_sensor        ;Call the all_sensor function to initialize the sensors and start the main loop.
 
 all_sensor:
     ldi R24, 0xFF
@@ -33,6 +33,7 @@ agn:
     RCALL byte2decimal    ;covert & display on MAX7219
     ;-----------------------------------------------------------
     RCALL delay_ms
+
     RJMP  loop
 
 echo_PW:
@@ -58,7 +59,7 @@ l2: IN    R21, TIFR1
     ;-----------------------------------------------------------
     LDS   R28, ICR1L      ;store count value at falling edge
     ;-----------------------------------------------------------
-    SUB   R28, R16        ;count diff R22 = R22 - R16
+    SUB   R28, R16        ;count diff R28 = R28 - R16
     OUT   TIFR1, R21      ;clear flag for next sensor reading
     RET
     
@@ -98,7 +99,7 @@ SPI_MAX7219_init:
       RCALL send_bytes      ;send command & data to MAX7219
       ;--------------------------------------------------------
       LDI   R17, 0x09       ;set decoding mode command
-      LDI   R18, 0b00110000 ;decoding byte
+      LDI   R18, 0b00000011 ;decoding byte
       RCALL send_bytes      ;send command & data to MAX7219
       ;--------------------------------------------------------
       LDI   R17, 0x0B       ;set scan limit command
@@ -115,11 +116,19 @@ SPI_MAX7219_init:
 MAX7219_disp_text:
 ;-----------------
       LDI   R17, 0x08       ;select digit 7
-      LDI   R18, 0x3D       ;data = d
+      LDI   R18, 0b00111101       ;data = d
       RCALL send_bytes      ;send command & data to MAX7219
       ;--------------------------------------------------------
       LDI   R17, 0x07       ;select digit 6
-      LDI   R18, 0x00       ;data = space
+      LDI   R18, 0b00110000        ;data = i
+      RCALL send_bytes      ;send command & data to MAX7219
+      ;--------------------------------------------------------
+      LDI   R17, 0x06       ;select digit 5
+      LDI   R18, 0b01011011       ;data = s
+      RCALL send_bytes      ;send command & data to MAX7219
+      ;--------------------------------------------------------
+      LDI   R17, 0x05       ;select digit 4
+      LDI   R18, 0b00001111       ;data = t
       RCALL send_bytes      ;send command & data to MAX7219
       ;--------------------------------------------------------
       LDI   R17, 0x04       ;select digit 3
@@ -127,15 +136,7 @@ MAX7219_disp_text:
       RCALL send_bytes      ;send command & data to MAX7219
       ;--------------------------------------------------------
       LDI   R17, 0x03       ;select digit 2
-      LDI   R18, 0x0D       ;data = c
-      RCALL send_bytes      ;send command & data to MAX7219
-      ;--------------------------------------------------------
-      LDI   R17, 0x02       ;select digit 1
-      LDI   R18, 0x15       ;data = n
-      RCALL send_bytes      ;send command & data to MAX7219
-      ;--------------------------------------------------------
-      LDI   R17, 0x01       ;select digit 0
-      LDI   R18, 0x0F       ;data = t
+      LDI   R18, 0x00       ;data = space
       RCALL send_bytes      ;send command & data to MAX7219
       ;--------------------------------------------------------
       RET
@@ -176,11 +177,11 @@ l80:  CPI   R28, 10         ;compare R28 with 10
       RJMP  l80
       ;--------------------------------------------------------  
 dsp:  MOV   R18, R27
-      LDI   R17, 0x06       ;select digit 5 for MSD
+      LDI   R17, 0x02       ;select digit 2 for MSD
       RCALL send_bytes      ;send command & data to MAX7219
       ;--------------------------------------------------------
       MOV   R18, R28
-      LDI   R17, 0x05       ;select digit 4 for LSD
+      LDI   R17, 0x01       ;select digit 1 for LSD
       RCALL send_bytes      ;send command & data to MAX7219    
       ;--------------------------------------------------------
       RET
