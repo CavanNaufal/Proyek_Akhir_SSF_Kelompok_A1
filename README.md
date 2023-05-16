@@ -11,11 +11,11 @@ Room Security System adalah alat keamanan ruangan yang dirancang dengan teknolog
 
 ## Features
 
--   [Introduction to the Problem and the Solution](#i.-introduction-to-the-problem-and-the-solution)
--   [Hardware Design and Implementation details](#ii.-hardware-design-and-implementationdetails)
--   [Software Implementation Details](#iii.-software-implementation-details)
--   [Test Results and Performance Evaluation](#iv.-test-results-and-performance-evaluation)
--   [Conclusion and Future Work](#v.-conclusion-and-future-work)
+-   [Introduction to the Problem and the Solution](#i-introduction-to-the-problem-and-the-solution)
+-   [Hardware Design and Implementation details](#ii-hardware-design-and-implementationdetails)
+-   [Software Implementation Details](#iii-software-implementation-details)
+-   [Test Results and Performance Evaluation](#iv-test-results-and-performance-evaluation)
+-   [Conclusion and Future Work](#v-conclusion-and-future-work)
 
 ### Power Point
 [![Link PPT Presentasi](https://img.shields.io/badge/Canva-%2300C4CC.svg?&style=for-the-badge&logo=Canva&logoColor=white)](https://www.canva.com/design/DAFjEY1QDDg/U4UY0C1rjZZYeSnTJdugcg/edit?utm_content=DAFjEY1QDDg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
