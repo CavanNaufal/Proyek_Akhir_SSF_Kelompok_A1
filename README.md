@@ -81,6 +81,16 @@ Subroutine SPI_MAX7219_init mengatur SPI untuk berkomunikasi dengan MAX7219 deng
 
 ## iv. Test results and performance evaluation
 
+Test Result :
+Berdasarkan cara kerja dan flow kode, kondisi di atas adalah kondisi dimana program baru saja dirun sehingga Arduino menyala, namun LED seven-segment masih belum dapat menampilkan hasil output yang sesuai, Sedangkan untuk buzzer dan LED merah menyala ketika sensor PIR dan sensor HC-SR04 mendeteksi pergerakan di sekitar.
+
+Performance Evaluation :
+Program alat ini disusun menggunakan bahasa assembly secara keseluruhannya, running dari program itu sendiri dilakukan pada Arduino IDE yang terpasang pada komputer pengujian. Sedangkan untuk mendesain dan menguji coba rangkaian prototipe, digunakan software bernama Proteus dan website pengujian, wokwi.com. Setelah program dijalankan, maka Arduino IDE akan mengkompilasi program untuk mengecek apakah terdapat kesalahan logika syntax error. Setelah berhasil dikompilasi, program di upload ke mikrokontroler ATmega328P pada Arduino menggunakan koneksi USB. Setelah dinyalakan, mikrokontroler akan melakukan inisialisasi. Mikrokontroler mengkonfigurasikan register arah data untuk menentukan status input/output dari pin yang diperlukan.
+
+Rangkaian akan melakukan pendeteksian pergerakan di lingkungan sekitar sensor, dalam hal ini, jika sensor diletakkan pada pintu, maka PIR Sensor atau sensor gerak akan mendeteksi pergerakan objek, di mana pun dalam jarak pandangnya, dengan mengukur perubahan cahaya inframerah yang dipancarkan atau dipantulkan oleh objek tersebut. Mikrokontroler membaca status sensor PIR yang terhubung ke pin input yang ditentukan. Program ini memeriksa apakah pin sensor PIR high atau low menggunakan operasi AND bitwise. Jika gerakan terdeteksi, pin sensor akan menjadi high, sinyal dari sensor akan dikirimkan ke LED dan Buzzer untuk pengaktifan kedua aktuator tersebut. Buzzer akan menerima getaran listrik untuk kemudian menghasilkan getaran suara. Begitu juga dengan LED disini yang akan menerima arus listrik dari sumber tegangan atau power supply berupa baterai yaitu powerbank. Hal yang sama juga terjadi pada sensor jarak yang akan mendeteksi objek pada jarak pandangnya, kemudian mengkalkulasikan jarak tersebut dan menampilkannya pada MAX7219.
+
+Jika tidak ada gerakan yang terdeteksi oleh sensor PIR, program akan berlanjut ke bagian dimana kode yang dieksekusi akan mematikan Buzzer dan LED. Program ini terus mengulang langkah-langkah di atas, berulang kali memeriksa gerakan dan memperbarui status buzzer dan LED berdasarkan input sensor. Hal ini memungkinkan sistem untuk terus memantau ruangan untuk setiap perubahan gerakan. Sebagaimana rangkaian ini telah dijelaskan, rangkaian mampu memberikan output sesuai dengan tujuan dan kriteria keberhasilan alat sehingga dalam hal ini, alat dinyatakan berfungsi sebagaimana mestinya di Proteus.
+
 ## v. Conclusion and Future Work
 
 Room Security System menggunakan mikrokontroler ATmega328P, sensor PIR, HC-SR04, buzzer, dan LED untuk memonitor gerakan di dalam ruangan. Sistem ini terus memeriksa jarak objek dan status sensor PIR. Ketika gerakan terdeteksi, buzzer dan LED memicu alarm dan memberikan indikasi visual. 
